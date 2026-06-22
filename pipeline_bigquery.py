@@ -47,7 +47,7 @@ livros = sopa.find_all("article", class_="product_pod")
 
 for livro in livros:
     titulo = livro.h3.a["title"]
-    # Limpa o preço (tira o símbolo £ e converte para float)
+    # Limpa o preço 
     preco_texto = livro.find("p", class_="price_color").text.replace("£", "").replace("Â", "")
     preco = float(preco_texto)
     disponibilidade = livro.find("p", class_="instock availability").text.strip()
